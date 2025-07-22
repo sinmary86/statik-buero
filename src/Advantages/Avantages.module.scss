@@ -1,0 +1,35 @@
+@use '../styles/vars.scss' as *;
+
+.sectionDark {
+  scroll-margin-top: $gap-64;
+  background-color: $secondary-color;
+  padding: $gap-80;
+
+  h2 {
+    color: $primary-color;
+    text-align: center;
+  }
+  
+  .advantagesContent {
+    color: $primary-color;
+    padding: $gap-80 0;
+
+     @media (max-width: 768px) {
+     padding: $gap-32 0;
+     gap: $gap-32;
+  } 
+
+    p {
+      width: 75%;   
+      
+      @media (max-width: 768px) {
+       width: 100%;
+    } 
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+  } 
+}

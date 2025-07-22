@@ -1,0 +1,70 @@
+@use "./vars.scss" as *;
+
+h1 {
+  position: relative;
+  z-index: 2;
+  color: $primary-color;
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+ 
+
+  @media (max-width: 768px) {
+    width: 75%;
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  font-size: $font-size-30;
+  text-transform: uppercase;
+  
+
+  @media (max-width: 768px) {
+     font-size: $font-size-24;
+  }
+
+  @media (max-width: 468px) {
+    font-size: $font-size-20;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  font-size: $font-size-20;
+  text-transform: uppercase;
+  color: $primary-color;
+  
+  @media (max-width: 768px) {
+     font-size: $font-size-24;
+  }
+
+  @media (max-width: 468px) {
+    font-size: $font-size-20;
+  }
+}
+
+
+h4 {
+  font-size: $font-size-20;
+  text-transform: uppercase;
+  color: $primary-color;
+  
+  @media (max-width: 768px) {
+     font-size: $font-size-18;
+  }
+}
+
+p {
+  font-size: $font-size-18;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: $font-size-16;
+  }
+
+  @media (max-width: 468px) {
+    font-size: $font-size-14;
+  }
+}

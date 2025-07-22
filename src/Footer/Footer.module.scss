@@ -1,0 +1,26 @@
+@use "../styles/vars.scss" as *;
+
+.footerContainer {
+  padding: $gap-32 $gap-80;
+
+  h4 {
+    color: $text-color;
+  }
+
+  button {
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  color: $text-color;
+
+
+  &:hover {
+    transform: scale(1.025);
+    color: $text-color;
+    text-decoration: underline;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+}
+

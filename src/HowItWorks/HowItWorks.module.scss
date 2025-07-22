@@ -1,0 +1,63 @@
+@use '../styles/vars.scss' as *;
+
+.sectionFoto {
+  position: relative;
+  scroll-margin-top: $gap-64;
+  padding: $gap-80;
+  margin-top: $gap-80;
+ 
+  background-image: url('../assets/beautiful-black-white-upshot-bui.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(24, 92, 195, 0.3);
+    z-index: 1;
+  }
+
+   h2 {
+    color: $primary-color;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+
+      .btn {
+      position: relative;
+      z-index: 2; 
+    }
+  
+  .howItWorksContent {
+    position: relative;
+    z-index: 2; 
+    color: $primary-color;
+    padding: $gap-80 0;
+
+    @media (max-width: 768px) {
+       justify-content: center;
+       padding-top: $gap-64;
+       padding-left: $gap-32;
+       width: 90%;
+    } 
+
+    span {
+        font-size: $font-size-70;
+        font-weight: bold;
+    }
+
+    p {
+      width: 80%;   
+      
+      @media (max-width: 768px) {
+       width: 100%;
+    } 
+    }
+
+
+  }
+
+}

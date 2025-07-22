@@ -1,0 +1,24 @@
+@use "./vars.scss" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color;
+  color: $text-color;
+  font-family: $font-text;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}

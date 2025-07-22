@@ -1,0 +1,52 @@
+@use '../styles/vars.scss' as *;
+
+.mainSection {
+  height: calc(100vh - $gap-96);
+  position: relative;
+  scroll-margin-top: $gap-64;
+ 
+  background-image: url('../assets/towers-building-view-from-street.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); // 60% затемнение
+    z-index: 1;
+  }
+  
+  .mainContent {
+    position: relative;
+    z-index: 2; // поверх затемнения
+    display: flex;
+    flex-direction: column;
+    padding-top: $gap-130;
+    padding-left: $gap-96;
+    width: 55%;
+
+    @media (max-width: 768px) {
+       justify-content: center;
+       padding: $gap-64  $gap-32  $gap-64  $gap-32;
+       width: 90%;
+    } 
+
+    
+    @media (max-width: 468px) {
+       justify-content: center;
+       padding: $gap-32;
+       width: 90%;
+    } 
+
+    
+  p {
+    color: $primary-color;
+  }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+  } 
+}

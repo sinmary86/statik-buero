@@ -1,0 +1,72 @@
+@use '../styles/vars.scss' as *;
+
+.experienceContent {
+  background-color: $secondary-color;
+  padding: $gap-48 0;
+  color: $primary-color;
+
+   @media (max-width: 768px) {
+     padding: $gap-32 0;
+     gap: $gap-32;
+  } 
+}
+    
+    
+.gridLayout {
+    display: grid;
+    scroll-margin-top: $gap-80;
+    width: 100%;
+    padding: $gap-80;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: $gap-32;
+    grid-template-areas:
+      "headerBlock imgSmall imgRight"
+      "textBlock imgSmall imgRight"
+      "btnBlock imgBig imgRight"
+      "imgUnderText imgBig imgRight";
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "headerBlock"
+        "textBlock"
+        "imgUnderText"
+        "imgBig"
+        "imgSmall"
+        "imgRight"
+        "btnBlock";
+    }
+
+   @media (max-width: 768px) {
+       padding: $gap-48 $gap-32;
+    } 
+}
+
+.headerBlock   { grid-area: headerBlock; }
+.textBlock     { grid-area: textBlock; }
+.btnBlock      { grid-area: btnBlock; }
+
+// 📦 Общий класс для всех контейнеров с img
+.imgContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 992px) {
+    height: 40vh;
+  }
+}
+
+// 🔧 Индивидуальные grid-area классы
+.imgTallRight   { @extend .imgContainer; grid-area: imgRight; }
+.imgSmallMiddle { @extend .imgContainer; grid-area: imgSmall; }
+.imgBigMiddle   { @extend .imgContainer; grid-area: imgBig; }
+.imgUnderText   { @extend .imgContainer; grid-area: imgUnderText; }

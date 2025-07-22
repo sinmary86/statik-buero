@@ -1,0 +1,53 @@
+@use '../styles/vars.scss' as *;
+
+.section {
+    padding: $gap-80;
+    scroll-margin-top: $gap-80;
+ 
+    @media (max-width: 768px) {
+       justify-content: center;
+       padding: $gap-48 $gap-32;
+    } 
+}
+
+
+.aboutWrapper {
+  display: flex;
+  gap: $gap-80;
+  align-items: flex-start;
+  gap: $gap-48;
+  color:   $text-color;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $gap-32;
+  }
+}
+
+.header {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  align-items: flex-start;
+
+ 
+}
+
+.textBlocks {
+  display: flex;
+  flex-direction: row;
+  gap: $gap-48;
+
+    @media (max-width: 768px) {
+     gap: $gap-32;
+  }
+
+  p {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
