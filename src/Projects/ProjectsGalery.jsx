@@ -1,8 +1,19 @@
+import { useState } from "react";
 import styles from "./Projects.module.scss";
+import { projectsData } from "./projectsData";
 
 export const ProjectGalery = () => {
+
+    const [showAll, setShowAll] = useState(false);
+
+    const visibleImages = projectsData.filter((img) => img.initialVisible);
+    const hiddenImages = projectsData.filter((img) => !img.initialVisible);
+
   return (
-    <section id="projects" className={styles.gridLayout}>
+ 
+    <section className={styles.wrapper}>
+
+        <div className={styles.gridLayout}> 
       
         <div className={styles.headerBlock}>
         <h2>Projekte</h2>
@@ -15,28 +26,31 @@ export const ProjectGalery = () => {
         </div>
 
          
-        <div className={styles.btnBlock}>
-        <button className="btn-dark">Alle Fotos ansehen</button>
+      <div className={styles.btnBlock}>
+        <button className="btn-dark" onClick={() => setShowAll((prev) => !prev)}>
+          {showAll ? "WENIGER ANZEIGEN" : "MEHR ANZEIGEN"}
+        </button>
+      </div>
+
+      {/* Основные изображения с позиционированием */}
+        {visibleImages.map((img) => (
+          <div key={img.className} className={styles[img.className]}>
+            <img src={img.src} alt={img.alt} />
+          </div>
+        ))}
+      </div>
+
+      {/* Дополнительные изображения в гриде */}
+      {showAll && (
+        <div className={styles.extraImagesWrapper}>
+          {hiddenImages.map((img, i) => (
+            <div key={i} className={styles.imgContainer}>
+              <img src={img.src} alt={img.alt} />
+            </div>
+          ))}
         </div>
+      )}
 
-        <div className={styles.imgUnderText}>
-             <img src="/src/assets/foto-of-our-work-four.png" alt="Projekt foto" />
-        </div>
-
-
-        <div className={styles.imgSmallMiddle}>
-             <img src="/src/assets/foto-of-our-work-three.png" alt="Projekt foto" />
-        </div>
-
-
-        <div className={styles.imgBigMiddle}>
-            <img src="/src/assets/foto-of-our-work-two.png" alt="Projekt foto" />
-        </div>
-
-        <div className={styles.imgTallRight}>
-            <img src="/src/assets/foto-of-our-work-one.png" alt="Projekt foto" />
-        </div>
-
-    </section>
+ </section>
   );
 };

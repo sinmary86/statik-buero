@@ -4,8 +4,7 @@
   position: relative;
   scroll-margin-top: $gap-64;
   padding: $gap-80;
-  margin-top: $gap-80;
- 
+  
   background-image: url('../assets/beautiful-black-white-upshot-bui.png');
   background-size: cover;
   background-position: center;
@@ -26,27 +25,31 @@
     position: relative;
   }
 
-      .btn {
-      position: relative;
-      z-index: 2; 
-    }
-  
   .howItWorksContent {
     position: relative;
     z-index: 2; 
     color: $primary-color;
-    padding: $gap-80 0;
+    padding: $gap-80 0 0 0;
 
     @media (max-width: 768px) {
        justify-content: center;
-       padding-top: $gap-64;
-       padding-left: $gap-32;
-       width: 90%;
+       padding: $gap-32;
+       
+       width: 100%;
+       gap: $gap-32;
     } 
 
     span {
         font-size: $font-size-70;
         font-weight: bold;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+
+          
+      @media (max-width: 768px) {
+         font-size: $font-size-40;
+    } 
     }
 
     p {
@@ -57,7 +60,10 @@
     } 
     }
 
-
   }
+
+  @media (max-width: 768px) {
+         padding:  $gap-48 $gap-32;
+    } 
 
 }

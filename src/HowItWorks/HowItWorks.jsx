@@ -21,9 +21,5 @@ export const HowItWorks = () => (
         </Col>
       ))}
     </Row>
-
-    <div className={`${styles.btn} text-center`}>
-      <a href="#" className={`${styles.btn} btn-light`}>Kontakt mit uns</a>
-    </div>
   </section>
 );

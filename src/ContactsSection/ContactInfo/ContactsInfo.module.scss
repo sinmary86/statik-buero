@@ -1,4 +1,4 @@
-@use '../styles/vars.scss' as *;
+@use '../../styles/vars.scss' as *;
 
 .sectionDark {
   scroll-margin-top: $gap-80;
@@ -29,26 +29,27 @@
   }
 
   .mapWrapper {
-    flex: 2 1 500px;
+    flex: 2 1 850px;
     height: 320px;
-    border: 1px solid white;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba($text-color, 0.2);
 
     iframe {
       width: 100%;
       height: 100%;
       display: block;
       border: none;
+      min-height: 40vh;
     }
 
     @media (max-width: 768px) {
       flex: 1 1 100%;
+     
     }
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: $gap-32 $gap-16;
+    padding: $gap-32 0 0 0;
     gap: $gap-32;
   }
 }

@@ -1,6 +1,6 @@
-import styles from './ContactSection.module.scss';
+import styles from './ContactsInfo.module.scss';
 
-export const ContactSection = () => {
+export const ContactInfo = () => {
   return (
     <section id="contacts" className={styles.sectionDark}>
       <div className={styles.contactInfo}>
@@ -18,7 +18,7 @@ export const ContactSection = () => {
 
         <div className={styles.contactBlock}>
           <h3>SCHREIBEN SIE UNS</h3>
-          <p>e-mail: schwarzkopf@skf-ing.de</p>
+          <p>e-mail: statik@sm-ing.de</p>
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import styles from './AboutSection.module.scss';
 export const AboutContent  = () => {
     return(
        <div className={styles.aboutWrapper}>
+      
       <div className={styles.header}>
         <h2>
           Büro

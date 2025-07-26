@@ -23,7 +23,7 @@ export const Avantages = () => (
     </Row>
 
     <div className="text-center">
-        <a href="#" className="btn-light">Kontakt mit uns</a>
+        <a href="#contacts" className="btn-light">Kontakt mit uns</a>
     </div>
   </section>
 );

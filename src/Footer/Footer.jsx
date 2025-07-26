@@ -1,4 +1,3 @@
-import { Col, Row } from "react-bootstrap";
 import { useState } from 'react';
 import styles from "./Footer.module.scss";
 import { ModalApp } from "../Modal/Modal";
@@ -14,8 +13,8 @@ export const FooterApp = () => {
 
   return (
     <footer className={styles.footerContainer}>
-        <Row className="align-items-center text-center text-md-start">
-          <Col md={6}>
+       
+          <div className={styles.columnLeft}>
             <h4>
               &copy; SM{" "}
               <span>
@@ -23,12 +22,10 @@ export const FooterApp = () => {
                 {currentYear === 2025 ? "2025" : `2025–${currentYear}`}
               </span>
             </h4>
-          </Col>
+          </div>
 
-          <Col
-            md={6}
-            className="d-flex justify-content-center justify-content-md-end gap-5"
-          >
+         <div className={styles.columnRight}>
+            
             <button
                 type="button"
                 onClick={() => setModalKey('impressum')}
@@ -45,8 +42,8 @@ export const FooterApp = () => {
                 DATENSCHUTZ
             </button>
 
-          </Col>
-        </Row>
+          </div>
+       
 
             {selectedModal && (
             <ModalApp

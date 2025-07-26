@@ -1,0 +1,106 @@
+@use "../../styles/vars.scss" as *;
+
+.clientsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap-64;
+  padding: $gap-80;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    padding: $gap-48 $gap-32;
+  }
+}
+
+.textBlock {
+  flex: 1;
+  color: $text-color;
+
+  h2 {
+    margin-bottom: $gap-32;
+  }
+
+  p {
+    max-width: 400px;
+  }
+}
+
+.carouselWrapper {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px; // нужная ширина
+  padding: 0 $gap-64; // пространство для стрелок
+
+  .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: $gap-32;
+  }
+
+   @media (max-width: 768px) {
+     padding: 0 $gap-32;
+  }
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $gap-32;
+
+  img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+
+    
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+
+   @media (max-width: 468px) {
+    height: 40px;
+  }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $secondary-color;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+
+  span {
+    color: white;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}

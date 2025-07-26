@@ -1,17 +1,20 @@
 export const howItWorksData = [
   {
     number: "01",
-    title: "Statik online anfragen",
-    description: "Mit wenigen Klicks fordern Sie die benötigte Statik bei uns online an. Alternativ dazu können Sie sich auch telefonisch oder per E-Mail an uns wenden.",
+    title: "Kontaktformular ausfüllen",
+    description:
+      "In nur wenigen Klicks füllen Sie unser Kontaktformular aus. Alternativ können Sie uns auch telefonisch oder per E-Mail kontaktieren.",
   },
   {
     number: "02",
-    title: "Individuelle Beratung",
-    description: "Innerhalb von 24 Stunden erhalten Sie ein individuelles Angebot per E-Mail. Wir melden uns bei Ihnen, um Details abzustimmen oder einen Termin zu vereinbaren.",
+    title: "Wir melden uns bei Ihnen",
+    description:
+      "Innerhalb von 48 Stunden nehmen wir Kontakt mit Ihnen auf, um offene Fragen zu klären oder einen Gesprächstermin zu vereinbaren.",
   },
   {
     number: "03",
-    title: "Angebot erhalten",
-    description: "Innerhalb von 48 Stunden erstellen wir für Ihre Anfrage ein individuelles Angebot, welches Sie per E-Mail erhalten und bei Gefallen bestätigen.",
+    title: "Individuelles Angebot",
+    description:
+      "Basierend auf den übermittelten Informationen erhalten Sie ein maßgeschneidertes Angebot direkt per E-Mail zugeschickt.",
   },
 ];
