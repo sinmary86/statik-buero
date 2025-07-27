@@ -33,10 +33,9 @@
        width: 90%;
     } 
 
-    
     @media (max-width: 468px) {
        justify-content: center;
-       padding: $gap-32;
+       padding: $gap-48 $gap-32;
        width: 90%;
     } 
 
