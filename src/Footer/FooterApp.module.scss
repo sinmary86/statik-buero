@@ -1,0 +1,28 @@
+@use "../styles/vars.scss" as *;
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $gap-32 $gap-80;
+  flex-wrap: wrap;
+  gap: $gap-32;
+}
+
+.column {
+  display: flex;
+  gap: $gap-32;
+}
+
+@media (max-width: 768px) {
+
+  .footerContainer {
+   padding: $gap-32;
+    gap: $gap-16;
+  }
+
+  .column {
+  gap: $gap-16;
+}
+}
+

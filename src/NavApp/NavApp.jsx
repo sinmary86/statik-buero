@@ -21,7 +21,7 @@ export const NavApp = () => {
                     <Nav.Link href="#contacts">KONTAKTEN</Nav.Link>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#" className={`${styles.btn} btn-dark`}>STATIK ANFRAGEN</Nav.Link>
+                    <Nav.Link href="#contacts" className={`${styles.btn} btn-dark`}>STATIK ANFRAGEN</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

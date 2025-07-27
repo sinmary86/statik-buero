@@ -8,7 +8,7 @@ export const AboutTeam = () => {
     <section className={styles.textBlocks}>
       <div className={styles.header}>
         <h2>
-          Unser
+          Unser{' '}
           <span className="d-none d-md-inline"><br /></span>
           Team
         </h2>

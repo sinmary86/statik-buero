@@ -6,7 +6,7 @@
   color: $primary-color;
 
    @media (max-width: 768px) {
-     padding: $gap-32 0;
+     padding: $gap-48 $gap-32;
      gap: $gap-32;
   } 
 }
@@ -14,16 +14,10 @@
 .wrapper {
     scroll-margin-top: $gap-80;
     padding: $gap-80;
-
-     @media (max-width: 768px) {
+     
+    @media (max-width: 768px) {
        padding: $gap-48 $gap-32;
     } 
-
-    button {
-        @media (max-width: 992px) {
-            margin-bottom: $gap-32; 
-        }
-    }
 }
     
     

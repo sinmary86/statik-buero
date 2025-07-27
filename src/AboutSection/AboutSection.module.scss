@@ -18,8 +18,6 @@
 .aboutWrapper {
   display: flex;
   gap: $gap-80;
-  align-items: flex-start;
-  gap: $gap-48;
   color:   $text-color;
 
   @media (max-width: 768px) {
@@ -30,11 +28,10 @@
 
 .header {
   flex: 0 0 auto;
-  margin: 0;
-  padding: 0;
-  text-align: start;
-  align-items: flex-start;
 
+   @media (max-width: 768px) {
+    text-align: center;
+  }
  
 }
 

@@ -1,0 +1,69 @@
+@use "./vars.scss" as *;
+
+/// Миксин для кнопок с фоном
+@mixin btn-base($bg-btn-color, $text-btn-color, $shadow-btn-color: rgba(0, 0, 0, 0.2)) {
+  
+  text-align: center;
+  background-color: $bg-btn-color;
+  color: $text-btn-color;
+  padding: $gap-8 $gap-32;
+  border: none;
+  border-right: 2px solid darken($bg-btn-color, 15%);
+  border-bottom: 2px solid darken($bg-btn-color, 15%);
+  box-shadow: 2px 2px 6px $shadow-btn-color;
+  font-weight: bold;
+  font-size: $font-size-20;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &.active {
+    transform: scale(1.03) translateY(-1px);
+    background-color: darken($bg-btn-color, 5%);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $font-size-16;
+  }
+}
+
+/// Темная кнопка
+.btn-dark {
+  @include btn-base($secondary-color, $primary-color);
+  width: 100%;
+  display: block;
+}
+
+/// Светлая кнопка
+.btn-light {
+  @include btn-base($primary-color, $secondary-color, rgba(0, 0, 0, 0.15));
+  display: inline-block;
+  width: auto;
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: lighten($primary-color, 2%);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/// Пустая кнопка без фона
+.button-empty {
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  color: $text-color;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+
+  &:hover {
+    transform: scale(1.025);
+    color: $text-color;
+    text-decoration: underline;
+  }
+}

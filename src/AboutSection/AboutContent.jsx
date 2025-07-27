@@ -7,7 +7,7 @@ export const AboutContent  = () => {
       
       <div className={styles.header}>
         <h2>
-          Büro
+          Büro{' '}
           <span className="d-none d-md-inline"><br /></span>
           Profil
         </h2>

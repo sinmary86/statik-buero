@@ -25,6 +25,7 @@
       align-items: center;
       text-align: center;
       flex: 1 1 100%;
+      padding-bottom: $gap-32;
     }
   }
 
@@ -49,7 +50,7 @@
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: $gap-32 0 0 0;
+    padding: $gap-48 0 0 0;
     gap: $gap-32;
   }
 }

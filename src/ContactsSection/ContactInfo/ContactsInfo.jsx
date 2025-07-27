@@ -12,8 +12,8 @@ export const ContactInfo = () => {
         </div>
 
         <div className={styles.contactBlock}>
-          <h3>RUFEN SIE AN</h3>
-          <p>Tel. / Fax. 7162 262626</p>
+          <h3>RUFEN SIE UNS AN</h3>
+          <p>Tel. / Fax. 7162 712671</p>
         </div>
 
         <div className={styles.contactBlock}>

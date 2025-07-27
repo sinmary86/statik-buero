@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from "./Footer.module.scss";
+import styles from "./FooterApp.module.scss"; 
 import { ModalApp } from "../Modal/Modal";
 import { ModalData } from "../Modal/ModalData";
 
@@ -14,22 +14,18 @@ export const FooterApp = () => {
   return (
     <footer className={styles.footerContainer}>
        
-          <div className={styles.columnLeft}>
+          <div>
             <h4>
-              &copy; SM{" "}
-              <span>
-                {" "}
-                {currentYear === 2025 ? "2025" : `2025–${currentYear}`}
-              </span>
-            </h4>
+              &copy; {currentYear === 2025 ? "2025" : `2025–${currentYear}`} SM  
+              </h4>
           </div>
 
-         <div className={styles.columnRight}>
+         <div className={styles.column}>
             
             <button
                 type="button"
                 onClick={() => setModalKey('impressum')}
-                className="btn p-0"
+                className="btn p-0 button-empty"
             >
                 IMPRESSUM
             </button>
@@ -37,7 +33,7 @@ export const FooterApp = () => {
             <button
                 type="button"
                 onClick={() => setModalKey('datenschutz')}
-                className="btn p-0"
+                className="btn p-0 button-empty"
             >
                 DATENSCHUTZ
             </button>

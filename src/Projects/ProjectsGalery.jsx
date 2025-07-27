@@ -11,7 +11,7 @@ export const ProjectGalery = () => {
 
   return (
  
-    <section className={styles.wrapper}>
+    <section id="projects" className={styles.wrapper}>
 
         <div className={styles.gridLayout}> 
       
