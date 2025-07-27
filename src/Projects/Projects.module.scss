@@ -78,7 +78,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $gap-32;
-  padding-top: $gap-32;
+  margin-top: $gap-32;
 
   > div {
     @extend .imgContainer;

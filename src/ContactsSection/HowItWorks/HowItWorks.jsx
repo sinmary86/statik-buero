@@ -5,7 +5,7 @@ import { howItWorksData } from "./HowItWorksData";
 
 export const HowItWorks = () => (
   <section className={styles.sectionFoto}>
-    <h2>Wie das funktioniert?</h2>
+    <h2>Wie funktioniert das?</h2>
 
     <Row className={styles.howItWorksContent}>
       {howItWorksData.map(({ number, title, description }, index) => (
